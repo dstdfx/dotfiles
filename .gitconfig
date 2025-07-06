@@ -1,0 +1,41 @@
+[alias]
+    co = checkout
+    ci = commit
+    st = status
+    br = branch
+    hist = log --graph --abbrev-commit --decorate --date=relative
+[color]
+ branch = auto
+ diff = auto
+ status = auto
+[color "branch"]
+ current = yellow reverse
+ local = yellow
+ remote = green
+[color "diff"]
+ meta = yellow bold
+ frag = magenta bold
+ old = red bold
+ new = green bold
+[color "status"]
+ added = yellow
+ changed = green
+ untracked = cyan
+
+[merge]
+ ff = false
+
+[core]
+ excludesfile = /Users/dstdfx/.gitignore_global
+
+[commit]
+ gpgsign = false
+
+[gpg]
+	program = gpg
+
+[user]
+	name = Daniil Rutskii
+	email = dstdfx@gmail.com
+[init]
+	defaultBranch = main
