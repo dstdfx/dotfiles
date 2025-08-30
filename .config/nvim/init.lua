@@ -705,6 +705,7 @@ require('lazy').setup({
               analyses = {
                 unusedparams = true,
                 shadow = true,
+                completeUnimported = true,
               },
               staticcheck = true,
             },
