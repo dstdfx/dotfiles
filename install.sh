@@ -53,14 +53,14 @@ install_macos() {
   ensure_homebrew
   log "brew update && install base packages"
   brew update
-  brew install neovim git ripgrep fd node python@3.13 fish curl rust kubectl
+  brew install neovim git ripgrep fd node python@3.13 fish curl rust go kubectl tree tmux
 
     # GUI apps / fonts
   brew install --cask iterm2
 
   # Nerd fonts (useful for powerline/OMF themes)
-  brew tap homebrew/cask-fonts
   brew install --cask font-meslo-lg-nerd-font
+  brew install --cask font-hack-nerd-font
   brew install --cask font-fira-code-nerd-font
   brew install --cask font-jetbrains-mono-nerd-font
 }
@@ -70,16 +70,17 @@ case "$OS" in
   *) err "Unsupported OS: $OS"; exit 1 ;;
 esac
 
-# --- Neovim providers ---
-if command -v npm >/dev/null 2>&1; then
+--- Neovim providers ---
+ if command -v npm >/dev/null 2>&1; then
   log "Ensure Node provider (neovim npm)"
   npm -g ls neovim >/dev/null 2>&1 || npm install -g neovim
 fi
 
-if command -v python3 >/dev/null 2>&1; then
-  log "Ensure Python provider (pynvim)"
-  python3 -m pip install --user --upgrade pynvim
-fi
+# Uncomment when needed
+# if command -v python3 >/dev/null 2>&1; then
+#   log "Ensure Python provider (pynvim)"
+#   python3 -m pip install --user --upgrade pynvim
+# fi
 
 # --- Fish shell: set as default
 FISH_BIN="$(command -v fish || true)"
@@ -103,7 +104,7 @@ if fish -lc "type -q omf" >/dev/null 2>&1; then
   fish -lc "omf install; omf reload"
 else
   log "Installing Oh-My-Fish (OMF)"
-  curl -fsSL https://get.oh-my.fish | fish
+  curl -fsSL https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
   fish -lc "omf install; omf reload"
 fi
 
