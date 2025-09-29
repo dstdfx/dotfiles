@@ -65,10 +65,6 @@ install_macos() {
   brew install --cask font-jetbrains-mono-nerd-font
 }
 
-install_ubuntu() {
-	# TODO
-}
-
 case "$OS" in
   Darwin) install_macos ;;
   *) err "Unsupported OS: $OS"; exit 1 ;;
