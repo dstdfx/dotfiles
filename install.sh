@@ -90,14 +90,14 @@ if [ "${SHELL:-}" != "${FISH_BIN}" ]; then
   chsh -s "${FISH_BIN}"
 fi
 
-# OMF: plugin manager for fish
-if fish -lc "type -q omf" >/dev/null 2>&1; then
-  log "OMF detected → syncing bundles"
-  fish -lc "omf install; omf reload"
+# Fisher: plugin manager for fish
+if fish -ls "type -q fisher" >/dev/null 2>&1; then
+  log "Fisher detected → syncing plugins"
+  fish -lc "fisher update"
 else
-  log "Installing Oh-My-Fish (OMF)"
-  curl -fsSL https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
-  fish -lc "omf install; omf reload"
+  log "Installing Fisher (fish plugin manager)"
+  curl -sL https://git.io/fisher | source && fish -lc "fisher install jorgebucaran/fisher"
+  fish -lc "fisher update"
 fi
 
 # Neovim: headless sync plugins and Treesitter parsers
