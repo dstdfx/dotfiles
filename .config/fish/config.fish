@@ -20,8 +20,8 @@ fish_add_path /opt/homebrew/opt/openjdk/bin;
 fish_add_path $HOME/.nvm
 fish_add_path $HOME/.nvm/versions/node/v22.16.0/bin/
 fish_add_path /opt/homebrew/Caskroom/gcloud-cli/531.0.0/google-cloud-sdk/bin
-fish_add_path /Users/dstdfx/k8s/gke/istio-1.26.2/bin
-fish_add_path /Users/dstdfx/.iximiuz/labctl/bin
+fish_add_path $HOME/k8s/gke/istio-1.26.2/bin
+fish_add_path $HOME/.iximiuz/labctl/bin
 fish_add_path /opt/homebrew/opt/curl/bin
 
 # Aliases
