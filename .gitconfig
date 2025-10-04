@@ -1,41 +1,66 @@
+[include]
+	path = ~/.gitconfig.local
+
 [alias]
-    co = checkout
-    ci = commit
-    st = status
-    br = branch
-    hist = log --graph --abbrev-commit --decorate --date=relative
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	hist = log --graph --abbrev-commit --decorate --date=relative
+	wip = commit -m "wip"
+
 [color]
- branch = auto
- diff = auto
- status = auto
+	branch = auto
+	diff = auto
+	status = auto
+
 [color "branch"]
- current = yellow reverse
- local = yellow
- remote = green
+	current = yellow reverse
+	local = yellow
+	remote = green
+
 [color "diff"]
- meta = yellow bold
- frag = magenta bold
- old = red bold
- new = green bold
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+
 [color "status"]
- added = yellow
- changed = green
- untracked = cyan
+	added = yellow
+	changed = green
+	untracked = cyan
 
 [merge]
- ff = false
+	ff = false
 
-[core]
- excludesfile = /Users/dstdfx/.gitignore_global
+[diff]
+	algorithm = histogram
+	colorMoved = zebra
+
+[log]
+	date = iso
+
+[fetch]
+	prune = true
+	pruneTags = true
+	writeCommitGraph = true
 
 [commit]
- gpgsign = false
+	gpgsign = true
+	verbose = true
+
+[tag]
+	gpgSign = true
 
 [gpg]
-	program = gpg
+	format = ssh
 
 [user]
 	name = Daniil Rutskii
 	email = dstdfx@gmail.com
+	useConfigOnly = true
+
 [init]
 	defaultBranch = main
+
+
