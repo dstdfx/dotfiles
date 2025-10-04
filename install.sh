@@ -62,7 +62,7 @@ case "$OS" in
   *) err "Unsupported OS: $OS"; exit 1 ;;
 esac
 
---- Neovim providers ---
+# Neovim providers
  if command -v npm >/dev/null 2>&1; then
   log "Ensure Node provider (neovim npm)"
   npm -g ls neovim >/dev/null 2>&1 || npm install -g neovim
@@ -74,7 +74,7 @@ fi
 #   python3 -m pip install --user --upgrade pynvim
 # fi
 
-# --- Fish shell: set as default
+# Fish shell: set as default
 FISH_BIN="$(command -v fish || true)"
 if [ -z "${FISH_BIN}" ]; then
   err "fish not installed (something went wrong above)"; exit 1

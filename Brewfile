@@ -1,4 +1,3 @@
-tap "homebrew/cask-fonts"
 brew "neovim"
 brew "git"
 brew "ripgrep"
