@@ -32,6 +32,7 @@
 
 [merge]
 	ff = false
+	conflictstyle = zdiff3
 
 [diff]
 	algorithm = histogram
@@ -39,6 +40,9 @@
 
 [log]
 	date = iso
+
+[pull]
+	rebase = true
 
 [fetch]
 	prune = true

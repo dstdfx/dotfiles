@@ -13,6 +13,8 @@ set -gx HOMEBREW_REPOSITORY "/opt/homebrew";
 
 set -gx NVM_DIR "$HOME/.nvm"
 
+set -Ux LANG en_US.UTF-8
+
 # Path
 fish_add_path /Applications/Wireshark.app/Contents/MacOS;
 fish_add_path $HOME/go/bin;

@@ -52,17 +52,9 @@ ensure_homebrew() {
 install_macos() {
   ensure_homebrew
   log "brew update && install base packages"
+
   brew update
-  brew install neovim git ripgrep fd node python@3.13 fish curl rust go kubectl tree tmux
-
-    # GUI apps / fonts
-  brew install --cask iterm2
-
-  # Nerd fonts (useful for powerline/OMF themes)
-  brew install --cask font-meslo-lg-nerd-font
-  brew install --cask font-hack-nerd-font
-  brew install --cask font-fira-code-nerd-font
-  brew install --cask font-jetbrains-mono-nerd-font
+  brew bundle --file="${HOME}/Brewfile"
 }
 
 case "$OS" in
