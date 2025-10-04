@@ -2,7 +2,7 @@
 
 Personal setup for macOS machine:
 - Neovim with lazyvim
-- Fish shell + OMF
+- Fish shell + Fisher plugins manager
 - Git configuration
 - Brew base packages
 
