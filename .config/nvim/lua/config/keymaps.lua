@@ -39,3 +39,7 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 -- Checktime keymap to reload files that have been changed outside of Neovim
 vim.keymap.set('n', '<leader>ut', ':checktime<CR>', { desc = '[U]pdate [T]ime from disk (checktime)' })
+
+-- Set custom keymaps for yanking and pasting to/from system clipboard
+vim.keymap.set({ 'n', 'v' }, '<leader>y', '"+y', { desc = 'Yank to system clipboard' })
+vim.keymap.set({ 'n', 'v' }, '<leader>p', '"+p', { desc = 'Paste from system clipboard' })
