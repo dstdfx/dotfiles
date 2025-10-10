@@ -97,7 +97,6 @@ if fish -ls "type -q fisher" >/dev/null 2>&1; then
 else
   log "Installing Fisher (fish plugin manager)"
   curl -sL https://git.io/fisher | source && fish -lc "fisher install jorgebucaran/fisher"
-  fish -lc "fisher update"
 fi
 
 # Neovim: headless sync plugins and Treesitter parsers
