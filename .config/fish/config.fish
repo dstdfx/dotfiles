@@ -29,3 +29,9 @@ fish_add_path /opt/homebrew/opt/curl/bin
 # Aliases
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias vim='nvim'
+alias vi='nvim'
+
+# k8s aliases
+alias k='kubectl'
+alias kx='kubectx'
+alias kns='kubens'
