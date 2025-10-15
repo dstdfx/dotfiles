@@ -15,6 +15,13 @@ set -gx NVM_DIR "$HOME/.nvm"
 
 set -Ux LANG en_US.UTF-8
 
+set -gx PATH $PATH $HOME/.krew/bin
+
+# Set default editors
+set -gx EDITOR nvim
+set -gx K9S_EDITOR nvim
+set -gx KUBE_EDITOR nvim
+
 # Path
 fish_add_path /Applications/Wireshark.app/Contents/MacOS;
 fish_add_path $HOME/go/bin;
@@ -29,6 +36,7 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias vim='nvim'
 alias vi='nvim'
 alias tmux='tmux -f $HOME/.config/tmux/tmux.conf'
+alias ls='ls -GFh'
 
 # k8s aliases
 alias k='kubectl'
