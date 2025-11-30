@@ -36,7 +36,7 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias vim='nvim'
 alias vi='nvim'
 alias tmux='tmux -f $HOME/.config/tmux/tmux.conf'
-alias ls='ls -GFh'
+alias ls='ls -GFh --color=auto'
 
 # k8s aliases
 alias k='kubectl'
