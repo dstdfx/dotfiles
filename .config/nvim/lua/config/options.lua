@@ -89,3 +89,12 @@ vim.opt.expandtab = false
 
 -- Set relative number
 vim.o.relativenumber = true
+
+
+-- Add terraform filetypes
+vim.filetype.add({
+	extension = {
+		tf = 'terraform',
+		tfvars = 'terraform',
+	},
+})

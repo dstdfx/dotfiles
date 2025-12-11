@@ -11,8 +11,6 @@ set -gx HOMEBREW_REPOSITORY "/opt/homebrew";
 ! set -q MANPATH; and set MANPATH ''; set -gx MANPATH "/opt/homebrew/share/man" $MANPATH;
 ! set -q INFOPATH; and set INFOPATH ''; set -gx INFOPATH "/opt/homebrew/share/info" $INFOPATH;
 
-set -gx NVM_DIR "$HOME/.nvm"
-
 set -Ux LANG en_US.UTF-8
 
 set -gx PATH $PATH $HOME/.krew/bin
@@ -42,3 +40,7 @@ alias ls='ls -GFh --color=auto'
 alias k='kubectl'
 alias kx='kubectx'
 alias kns='kubens'
+
+# Set the NVM directory
+set -gx NVM_DIR "$HOME/.nvm"
+
