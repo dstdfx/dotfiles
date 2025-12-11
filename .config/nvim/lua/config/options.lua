@@ -88,7 +88,7 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = false
 
 -- Set relative number
-vim.o.relativenumber = true
+-- vim.o.relativenumber = true
 
 
 -- Add terraform filetypes
